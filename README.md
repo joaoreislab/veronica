@@ -1,7 +1,7 @@
 # Veronica, um Ruflo otimizado?
 
 **Uma skill para conduzir trabalhos longos com IA e preservar o próximo passo, gestão de agentes, autonomia de planejamento e execução milimetrica do inicio ao fim**
-
+(*Recomendado usar com GPT- ASTRA 6, GPT-SOl 6.1, OPUS 5, OPUS 5.5, linha FABLE e semelhantes, para que o modelo acompanhe as capacidades, estruturas e adaptações do modelo*)
 Estado salvo, dependências, retomada e evidências de conclusão em um núcleo local de Python e SQLite.
 
 Quando um projeto atravessa várias sessões, o trabalho precisa de um lugar para guardar decisões, pendências e o que foi realmente verificado. Veronica fornece instruções e um helper local para registrar esse processo no workspace.
