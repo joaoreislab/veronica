@@ -1,6 +1,6 @@
 # Veronica, um Ruflo otimizado?
 
-**Uma skill para conduzir trabalhos longos com IA e preservar o próximo passo.**
+**Uma skill para conduzir trabalhos longos com IA e preservar o próximo passo, gestão de agentes, autonomia de planejamento e execução milimetrica do inicio ao fim**
 
 Estado salvo, dependências, retomada e evidências de conclusão em um núcleo local de Python e SQLite.
 
