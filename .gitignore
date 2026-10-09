@@ -1,0 +1,16 @@
+# Estado local de projetos e arquivos temporários
+work/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Bancos e cópias de estado gerados localmente
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3

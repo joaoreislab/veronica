@@ -1,0 +1,4 @@
+interface:
+  display_name: "Veronica"
+  short_description: "Planejamento, retomada e evidências para tarefas longas"
+  default_prompt: "Use $veronica para conduzir este trabalho longo e preservar o próximo passo com evidências de conclusão."

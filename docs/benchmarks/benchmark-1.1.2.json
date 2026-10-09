@@ -1,0 +1,5473 @@
+{
+  "scope": "Controlled local workflows; no model/API calls or billed token measurements",
+  "features": {
+    "S": "Snapshots compartilhados",
+    "C": "Codec reversível",
+    "Q": "Consulta literal",
+    "H": "Hash por consulta",
+    "R": "Visão da tarefa",
+    "U": "Medição idempotente"
+  },
+  "conditions": 29,
+  "cases": 3,
+  "repeats": 3,
+  "executions": 261,
+  "all_valid": true,
+  "limitations": [
+    "Synthetic fixtures with expected answers and exact recovery, not a general model-quality test",
+    "Full-content comparator measures an inefficient context-delivery pattern; targeted comparator performs native local selection",
+    "Bytes are serialized UTF-8 bytes, not model tokens",
+    "Synthetic usage numbers test accounting only; they are not usage of this benchmark",
+    "Local times include hashing/storage/codec; filesystem cache and tiny samples limit latency conclusions",
+    "Catalog and metadata overhead included in disk/returned-byte metrics; do not add component percentages"
+  ],
+  "records": [
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 63.99069994222373,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 59.13489998783916,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 147.58770004846156,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 107.51539992634207,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141194,
+      "local_ms": 99.7677999548614,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 49.27070008125156,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 67.83559999894351,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 102.40880004130304,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13563,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 142.63410004787147,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 135.86009992286563,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 116.68999993707985,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 141.80099999066442,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40445,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 140.20050002727658,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 110.94749998301268,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 97.03970002010465,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5622,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 94.11930001806468,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13231,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 114.77179999928921,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 104.85729994252324,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141194,
+      "local_ms": 98.01079996395856,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 110.37539993412793,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 44.16059993673116,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 85.50679998006672,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 93.9292999682948,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 152.77690009679645,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 123.13369999174029,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 106.49629996623844,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 87.43790001608431,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 140.36750001832843,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 1,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 50.38850009441376,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 51.51669995393604,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 144.130100030452,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 78.9108999306336,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 108.59680001158267,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 109.2266000341624,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 139.72580002155155,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 96.99949994683266,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 81.14170003682375,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 46.67760001029819,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 122.5795999635011,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 115.00299989711493,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 86.9611999951303,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13231,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141194,
+      "local_ms": 117.4527999246493,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5622,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 107.47679998166859,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 96.85600001830608,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 112.8315000096336,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40445,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60419,
+      "local_ms": 164.3617000663653,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 136.48430001921952,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 133.6198999779299,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60419,
+      "local_ms": 135.50800003577024,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13563,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 154.99980002641678,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 103.19330007769167,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 73.6826000502333,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 51.53150006663054,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 106.96789994835854,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 106.94009996950626,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 135.2632000343874,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 68.39500006753951,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 2,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 74.95409995317459,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 71.09219999983907,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 63.56440007220954,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60419,
+      "local_ms": 145.25639999192208,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 108.70079998858273,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 118.77679999452084,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 58.27140004839748,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 69.56149998586625,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 120.842200005427,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13563,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 130.924699944444,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 153.71919993776828,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 135.40899998042732,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 138.8845999026671,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 40445,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 162.04650001600385,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 107.33370005618781,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 161.30739997606725,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5622,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 125.00139989424497,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13231,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141194,
+      "local_ms": 284.0417999541387,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 87.00390008743852,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 124.69819991383702,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 127.63669993728399,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 54.116399958729744,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 83.99940002709627,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 94.81259994208813,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60419,
+      "local_ms": 133.56089999433607,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 137.44110008701682,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 94.82549992389977,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 79.97910003177822,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 140.81540005281568,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "repetitive",
+      "repeat": 3,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 52.73009999655187,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 70.21259993780404,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 81.34970010723919,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 158.30250002909452,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 133.3275999641046,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 108.10040007345378,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 54.55659993458539,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 84.6095000160858,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 109.08279998693615,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 151.948899962008,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 142.91519997641444,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 129.95940004475415,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87791,
+      "local_ms": 127.54250003490597,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67817,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 167.45870001614094,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 207.97649992164224,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 139.7474999539554,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 132.7678000088781,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 136.91260002087802,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 88.81800004746765,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 101.23509995173663,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 114.02730003464967,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 66.51969999074936,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 77.71830004639924,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 85.97170002758503,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 154.0353000164032,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 127.03800003509969,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 131.81310007348657,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 88.33990001585335,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 139.6886999718845,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 1,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 50.384099944494665,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 65.6843000324443,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 143.26420007273555,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 75.6485000019893,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 112.29429999366403,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87791,
+      "local_ms": 124.29379997774959,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 165.45700002461672,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 94.39599991310388,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 74.20220004860312,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 62.256300006993115,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 121.6874000383541,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 103.4342999337241,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 97.95640001539141,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 123.58160002622753,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 110.10799999348819,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 96.82830004021525,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 118.55209991335869,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67817,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 159.87710002809763,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87792,
+      "local_ms": 140.7130000879988,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 131.50610006414354,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 126.39720004517585,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 154.57679994869977,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 95.5882000271231,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 78.02879996597767,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 49.5732999406755,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 108.13069995492697,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 110.54799996782094,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 134.67749999836087,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 79.33209999464452,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 2,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 75.96839999314398,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 72.86700000986457,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 67.16020009480417,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 121.26869999337941,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 104.10130000673234,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 117.19840008299798,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 51.68909998610616,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 77.14589999523014,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 98.24840002693236,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 150.50840005278587,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 152.0871000830084,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 123.32799995783716,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 155.1250999327749,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67817,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 153.71059998869896,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 113.41350001748651,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 83.16939999349415,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 130.95889997202903,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 144.20600002631545,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250682,
+      "local_ms": 185.59420004021376,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 117.6381999393925,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 134.54990007448941,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 59.6277000149712,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 101.48640000261366,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 100.17200000584126,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 147.79429999180138,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 124.91720006801188,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 107.53520007710904,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 75.2470000879839,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 134.9003000650555,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unique",
+      "repeat": 3,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 56.5871000289917,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 59.97939989902079,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 72.39750004373491,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 170.7890999969095,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 106.76910006441176,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 109.03809999581426,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 50.6669000023976,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 63.83929995354265,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 94.05440010596067,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 130.23730006534606,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81498,
+      "local_ms": 130.70580002386123,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 124.2133000632748,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 145.16429998911917,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61523,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 147.13629998732358,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225505,
+      "local_ms": 111.98170005809516,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 87.77159999590367,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 99.1111999610439,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 120.65900000743568,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 87.42799994070083,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 105.42560007888824,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 140.43489994946867,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 56.36269995011389,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 68.91589995939285,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 95.50129994750023,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 145.3662000130862,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 106.41790006775409,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 111.01150000467896,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 74.47669992689043,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 130.850899964571,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 1,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 47.29720007162541,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 53.043499938212335,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 143.54840002488345,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 87.27819996420294,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 109.88190001808107,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 108.9395999442786,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81498,
+      "local_ms": 154.91819998715073,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 90.85580008104444,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 77.34109996818006,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 57.80299997422844,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 123.19559999741614,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 94.60379998199642,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 105.81599990837276,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 112.72959993220866,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 104.56390003673732,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 91.59760002512485,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 94.37249996699393,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61523,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 153.51500001270324,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 145.5198999028653,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 125.18690002616495,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 141.11780002713203,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81498,
+      "local_ms": 128.78250004723668,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 87.25549990776926,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 67.75380007456988,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 47.93780006002635,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 109.20990002341568,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 103.08649996295571,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 143.02660000976175,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 77.39540003240108,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 2,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 67.18020001426339,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "baseline-full",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 77.0653000799939,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "baseline-targeted",
+      "features": [],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 74.5516000315547,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S",
+      "features": [
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 139.958499930799,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C",
+      "features": [
+        "C"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 132.15069996658713,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "Q",
+      "features": [
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 102.09659999236465,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "H",
+      "features": [
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 45.67090002819896,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "R",
+      "features": [
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 62.82470002770424,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "U",
+      "features": [
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 92.61170006357133,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+C",
+      "features": [
+        "C",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81498,
+      "local_ms": 147.95379992574453,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+Q",
+      "features": [
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 138.02770001348108,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+H",
+      "features": [
+        "H",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 136.1397000728175,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+R",
+      "features": [
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 139.45790007710457,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+U",
+      "features": [
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61523,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 160.75249994173646,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C+Q",
+      "features": [
+        "C",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 91.39940002933145,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C+H",
+      "features": [
+        "C",
+        "H"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 86.97609999217093,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C+R",
+      "features": [
+        "C",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 93.37229991797358,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C+U",
+      "features": [
+        "C",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225505,
+      "local_ms": 117.00050008948892,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "Q+H",
+      "features": [
+        "H",
+        "Q"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 83.32530001644045,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "Q+R",
+      "features": [
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 106.18140001315624,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "Q+U",
+      "features": [
+        "Q",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 128.71970003470778,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "H+R",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 56.54530005995184,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "H+U",
+      "features": [
+        "H",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 84.27039999514818,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "R+U",
+      "features": [
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 98.34639995824546,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+C+Q",
+      "features": [
+        "C",
+        "Q",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 134.41239995881915,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+H+R",
+      "features": [
+        "H",
+        "R",
+        "S"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 125.26809994596988,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "C+Q+R",
+      "features": [
+        "C",
+        "Q",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 103.10670000035316,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "H+R+U",
+      "features": [
+        "H",
+        "R",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 76.64380001369864,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "S+C+Q+H+R+U",
+      "features": [
+        "C",
+        "H",
+        "Q",
+        "R",
+        "S",
+        "U"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 150.16540000215173,
+      "model_tokens": null,
+      "api_cost": null
+    },
+    {
+      "case": "unicode",
+      "repeat": 3,
+      "condition": "adaptive-native",
+      "features": [
+        "H",
+        "R"
+      ],
+      "valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 46.7627999605611,
+      "model_tokens": null,
+      "api_cost": null
+    }
+  ],
+  "summary": [
+    {
+      "case": "repetitive",
+      "condition": "baseline-full",
+      "all_valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 71.09219999983907,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -636.6833240792153
+    },
+    {
+      "case": "repetitive",
+      "condition": "baseline-targeted",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 63.56440007220954,
+      "returned_bytes_reduction_vs_full_pct": 86.42564630806723,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    },
+    {
+      "case": "repetitive",
+      "condition": "S",
+      "all_valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 145.25639999192208,
+      "returned_bytes_reduction_vs_full_pct": -1.223525864884567,
+      "returned_bytes_reduction_vs_targeted_pct": -645.6968350916158
+    },
+    {
+      "case": "repetitive",
+      "condition": "C",
+      "all_valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 107.51539992634207,
+      "returned_bytes_reduction_vs_full_pct": 67.14820490917771,
+      "returned_bytes_reduction_vs_targeted_pct": -142.01369609476217
+    },
+    {
+      "case": "repetitive",
+      "condition": "Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 106.96789994835854,
+      "returned_bytes_reduction_vs_full_pct": 67.16076677637363,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "repetitive",
+      "condition": "H",
+      "all_valid": true,
+      "returned_utf8_bytes": 39803,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 51.53150006663054,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -636.6833240792153
+    },
+    {
+      "case": "repetitive",
+      "condition": "R",
+      "all_valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 69.56149998586625,
+      "returned_bytes_reduction_vs_full_pct": 18.727231615707364,
+      "returned_bytes_reduction_vs_targeted_pct": -498.7229317046085
+    },
+    {
+      "case": "repetitive",
+      "condition": "U",
+      "all_valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 103.19330007769167,
+      "returned_bytes_reduction_vs_full_pct": -0.38941788307413905,
+      "returned_bytes_reduction_vs_targeted_pct": -639.5521006848047
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+C",
+      "all_valid": true,
+      "returned_utf8_bytes": 13563,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 142.63410004787147,
+      "returned_bytes_reduction_vs_full_pct": 65.92467904429314,
+      "returned_bytes_reduction_vs_targeted_pct": -151.0272071071627
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 135.86009992286563,
+      "returned_bytes_reduction_vs_full_pct": 65.93724091148908,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 40290,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60422,
+      "local_ms": 133.6198999779299,
+      "returned_bytes_reduction_vs_full_pct": -1.223525864884567,
+      "returned_bytes_reduction_vs_targeted_pct": -645.6968350916158
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 138.8845999026671,
+      "returned_bytes_reduction_vs_full_pct": 17.503705750822807,
+      "returned_bytes_reduction_vs_targeted_pct": -507.7364427170091
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 40445,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60420,
+      "local_ms": 162.04650001600385,
+      "returned_bytes_reduction_vs_full_pct": -1.612943747958706,
+      "returned_bytes_reduction_vs_targeted_pct": -648.5656116972052
+    },
+    {
+      "case": "repetitive",
+      "condition": "C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 110.94749998301268,
+      "returned_bytes_reduction_vs_full_pct": 67.16076677637363,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "repetitive",
+      "condition": "C+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 13076,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 97.03970002010465,
+      "returned_bytes_reduction_vs_full_pct": 67.14820490917771,
+      "returned_bytes_reduction_vs_targeted_pct": -142.01369609476217
+    },
+    {
+      "case": "repetitive",
+      "condition": "C+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5622,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 107.47679998166859,
+      "returned_bytes_reduction_vs_full_pct": 85.87543652488506,
+      "returned_bytes_reduction_vs_targeted_pct": -4.053303720155466
+    },
+    {
+      "case": "repetitive",
+      "condition": "C+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 13231,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141194,
+      "local_ms": 117.4527999246493,
+      "returned_bytes_reduction_vs_full_pct": 66.75878702610356,
+      "returned_bytes_reduction_vs_targeted_pct": -144.88247270035166
+    },
+    {
+      "case": "repetitive",
+      "condition": "Q+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 87.00390008743852,
+      "returned_bytes_reduction_vs_full_pct": 67.16076677637363,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "repetitive",
+      "condition": "Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 115.00299989711493,
+      "returned_bytes_reduction_vs_full_pct": 85.887998392081,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "repetitive",
+      "condition": "Q+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 122.5795999635011,
+      "returned_bytes_reduction_vs_full_pct": 66.7713488932995,
+      "returned_bytes_reduction_vs_targeted_pct": -144.7899315195262
+    },
+    {
+      "case": "repetitive",
+      "condition": "H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 32349,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 46.67760001029819,
+      "returned_bytes_reduction_vs_full_pct": 18.727231615707364,
+      "returned_bytes_reduction_vs_targeted_pct": -498.7229317046085
+    },
+    {
+      "case": "repetitive",
+      "condition": "H+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 39958,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 83.99940002709627,
+      "returned_bytes_reduction_vs_full_pct": -0.38941788307413905,
+      "returned_bytes_reduction_vs_targeted_pct": -639.5521006848047
+    },
+    {
+      "case": "repetitive",
+      "condition": "R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 94.81259994208813,
+      "returned_bytes_reduction_vs_full_pct": 18.337813732633222,
+      "returned_bytes_reduction_vs_targeted_pct": -501.59170831019804
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 139.72580002155155,
+      "returned_bytes_reduction_vs_full_pct": 65.93724091148908,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 32836,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 123.13369999174029,
+      "returned_bytes_reduction_vs_full_pct": 17.503705750822807,
+      "returned_bytes_reduction_vs_targeted_pct": -507.7364427170091
+    },
+    {
+      "case": "repetitive",
+      "condition": "C+Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 649440,
+      "artifact_disk_bytes_including_catalog": 141195,
+      "local_ms": 106.49629996623844,
+      "returned_bytes_reduction_vs_full_pct": 85.887998392081,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "repetitive",
+      "condition": "H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 32504,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 113948,
+      "local_ms": 79.97910003177822,
+      "returned_bytes_reduction_vs_full_pct": 18.337813732633222,
+      "returned_bytes_reduction_vs_targeted_pct": -501.59170831019804
+    },
+    {
+      "case": "repetitive",
+      "condition": "S+C+Q+H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 60421,
+      "local_ms": 140.81540005281568,
+      "returned_bytes_reduction_vs_full_pct": 84.2750546441223,
+      "returned_bytes_reduction_vs_targeted_pct": -15.843050157320015
+    },
+    {
+      "case": "repetitive",
+      "condition": "adaptive-native",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 27060,
+      "artifact_disk_bytes_including_catalog": 81180,
+      "local_ms": 51.51669995393604,
+      "returned_bytes_reduction_vs_full_pct": 86.42564630806723,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    },
+    {
+      "case": "unique",
+      "condition": "baseline-full",
+      "all_valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 72.86700000986457,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1143.2907643901538
+    },
+    {
+      "case": "unique",
+      "condition": "baseline-targeted",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 79.33209999464452,
+      "returned_bytes_reduction_vs_full_pct": 91.9568291775214,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    },
+    {
+      "case": "unique",
+      "condition": "S",
+      "all_valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 134.67749999836087,
+      "returned_bytes_reduction_vs_full_pct": -0.724972087830289,
+      "returned_bytes_reduction_vs_targeted_pct": -1152.3042754025541
+    },
+    {
+      "case": "unique",
+      "condition": "C",
+      "all_valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 110.54799996782094,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1143.2907643901538
+    },
+    {
+      "case": "unique",
+      "condition": "Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 108.13069995492697,
+      "returned_bytes_reduction_vs_full_pct": 80.54186825455899,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unique",
+      "condition": "H",
+      "all_valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 51.68909998610616,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1143.2907643901538
+    },
+    {
+      "case": "unique",
+      "condition": "R",
+      "all_valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 78.02879996597767,
+      "returned_bytes_reduction_vs_full_pct": 11.096390026051361,
+      "returned_bytes_reduction_vs_targeted_pct": -1005.3303720155469
+    },
+    {
+      "case": "unique",
+      "condition": "U",
+      "all_valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 98.24840002693236,
+      "returned_bytes_reduction_vs_full_pct": -0.23074060290286802,
+      "returned_bytes_reduction_vs_targeted_pct": -1146.159540995743
+    },
+    {
+      "case": "unique",
+      "condition": "S+C",
+      "all_valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 151.948899962008,
+      "returned_bytes_reduction_vs_full_pct": -0.724972087830289,
+      "returned_bytes_reduction_vs_targeted_pct": -1152.3042754025541
+    },
+    {
+      "case": "unique",
+      "condition": "S+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87794,
+      "local_ms": 142.91519997641444,
+      "returned_bytes_reduction_vs_full_pct": 79.8168961667287,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "unique",
+      "condition": "S+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 67662,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 129.95940004475415,
+      "returned_bytes_reduction_vs_full_pct": -0.724972087830289,
+      "returned_bytes_reduction_vs_targeted_pct": -1152.3042754025541
+    },
+    {
+      "case": "unique",
+      "condition": "S+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87792,
+      "local_ms": 140.7130000879988,
+      "returned_bytes_reduction_vs_full_pct": 10.371417938221061,
+      "returned_bytes_reduction_vs_targeted_pct": -1014.3438830279475
+    },
+    {
+      "case": "unique",
+      "condition": "S+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 67817,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 159.87710002809763,
+      "returned_bytes_reduction_vs_full_pct": -0.955712690733157,
+      "returned_bytes_reduction_vs_targeted_pct": -1155.1730520081437
+    },
+    {
+      "case": "unique",
+      "condition": "C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 118.55209991335869,
+      "returned_bytes_reduction_vs_full_pct": 80.54186825455899,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unique",
+      "condition": "C+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 67175,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 96.82830004021525,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1143.2907643901538
+    },
+    {
+      "case": "unique",
+      "condition": "C+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 130.95889997202903,
+      "returned_bytes_reduction_vs_full_pct": 11.096390026051361,
+      "returned_bytes_reduction_vs_targeted_pct": -1005.3303720155469
+    },
+    {
+      "case": "unique",
+      "condition": "C+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 136.91260002087802,
+      "returned_bytes_reduction_vs_full_pct": -0.23074060290286802,
+      "returned_bytes_reduction_vs_targeted_pct": -1146.159540995743
+    },
+    {
+      "case": "unique",
+      "condition": "Q+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 97.95640001539141,
+      "returned_bytes_reduction_vs_full_pct": 80.54186825455899,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unique",
+      "condition": "Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 103.4342999337241,
+      "returned_bytes_reduction_vs_full_pct": 91.63825828061034,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "unique",
+      "condition": "Q+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 121.6874000383541,
+      "returned_bytes_reduction_vs_full_pct": 80.31112765165612,
+      "returned_bytes_reduction_vs_targeted_pct": -144.7899315195262
+    },
+    {
+      "case": "unique",
+      "condition": "H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 59721,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 62.256300006993115,
+      "returned_bytes_reduction_vs_full_pct": 11.096390026051361,
+      "returned_bytes_reduction_vs_targeted_pct": -1005.3303720155469
+    },
+    {
+      "case": "unique",
+      "condition": "H+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 67330,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 77.71830004639924,
+      "returned_bytes_reduction_vs_full_pct": -0.23074060290286802,
+      "returned_bytes_reduction_vs_targeted_pct": -1146.159540995743
+    },
+    {
+      "case": "unique",
+      "condition": "R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 94.39599991310388,
+      "returned_bytes_reduction_vs_full_pct": 10.865649423148493,
+      "returned_bytes_reduction_vs_targeted_pct": -1008.1991486211365
+    },
+    {
+      "case": "unique",
+      "condition": "S+C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 154.0353000164032,
+      "returned_bytes_reduction_vs_full_pct": 79.8168961667287,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "unique",
+      "condition": "S+H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 60208,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 124.91720006801188,
+      "returned_bytes_reduction_vs_full_pct": 10.371417938221061,
+      "returned_bytes_reduction_vs_targeted_pct": -1014.3438830279475
+    },
+    {
+      "case": "unique",
+      "condition": "C+Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1306368,
+      "artifact_disk_bytes_including_catalog": 250683,
+      "local_ms": 112.29429999366403,
+      "returned_bytes_reduction_vs_full_pct": 91.63825828061034,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "unique",
+      "condition": "H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 59876,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 196064,
+      "local_ms": 75.6485000019893,
+      "returned_bytes_reduction_vs_full_pct": 10.865649423148493,
+      "returned_bytes_reduction_vs_targeted_pct": -1008.1991486211365
+    },
+    {
+      "case": "unique",
+      "condition": "S+C+Q+H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 87793,
+      "local_ms": 139.6886999718845,
+      "returned_bytes_reduction_vs_full_pct": 90.68254558987718,
+      "returned_bytes_reduction_vs_targeted_pct": -15.843050157320015
+    },
+    {
+      "case": "unique",
+      "condition": "adaptive-native",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 54432,
+      "artifact_disk_bytes_including_catalog": 163296,
+      "local_ms": 56.5871000289917,
+      "returned_bytes_reduction_vs_full_pct": 91.9568291775214,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    },
+    {
+      "case": "unicode",
+      "condition": "baseline-full",
+      "all_valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 67.18020001426339,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1026.7999259670553
+    },
+    {
+      "case": "unicode",
+      "condition": "baseline-targeted",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 74.5516000315547,
+      "returned_bytes_reduction_vs_full_pct": 91.12531003104417,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    },
+    {
+      "case": "unicode",
+      "condition": "S",
+      "all_valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 143.02660000976175,
+      "returned_bytes_reduction_vs_full_pct": -0.7999211576682486,
+      "returned_bytes_reduction_vs_targeted_pct": -1035.813436979456
+    },
+    {
+      "case": "unicode",
+      "condition": "C",
+      "all_valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 106.76910006441176,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1026.7999259670553
+    },
+    {
+      "case": "unicode",
+      "condition": "Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 109.03809999581426,
+      "returned_bytes_reduction_vs_full_pct": 78.53024753207076,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unicode",
+      "condition": "H",
+      "all_valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 47.93780006002635,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1026.7999259670553
+    },
+    {
+      "case": "unicode",
+      "condition": "R",
+      "all_valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 63.83929995354265,
+      "returned_bytes_reduction_vs_full_pct": 12.24355710320133,
+      "returned_bytes_reduction_vs_targeted_pct": -888.8395335924486
+    },
+    {
+      "case": "unicode",
+      "condition": "U",
+      "all_valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 92.61170006357133,
+      "returned_bytes_reduction_vs_full_pct": -0.2545950296479971,
+      "returned_bytes_reduction_vs_targeted_pct": -1029.6687025726449
+    },
+    {
+      "case": "unicode",
+      "condition": "S+C",
+      "all_valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81498,
+      "local_ms": 130.23730006534606,
+      "returned_bytes_reduction_vs_full_pct": -0.7999211576682486,
+      "returned_bytes_reduction_vs_targeted_pct": -1035.813436979456
+    },
+    {
+      "case": "unicode",
+      "condition": "S+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 138.02770001348108,
+      "returned_bytes_reduction_vs_full_pct": 77.73032637440252,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "unicode",
+      "condition": "S+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 61368,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 125.18690002616495,
+      "returned_bytes_reduction_vs_full_pct": -0.7999211576682486,
+      "returned_bytes_reduction_vs_targeted_pct": -1035.813436979456
+    },
+    {
+      "case": "unicode",
+      "condition": "S+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 145.16429998911917,
+      "returned_bytes_reduction_vs_full_pct": 11.443635945533092,
+      "returned_bytes_reduction_vs_targeted_pct": -897.8530446048492
+    },
+    {
+      "case": "unicode",
+      "condition": "S+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 61523,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 153.51500001270324,
+      "returned_bytes_reduction_vs_full_pct": -1.0545161873162456,
+      "returned_bytes_reduction_vs_targeted_pct": -1038.6822135850452
+    },
+    {
+      "case": "unicode",
+      "condition": "C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 94.37249996699393,
+      "returned_bytes_reduction_vs_full_pct": 78.53024753207076,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unicode",
+      "condition": "C+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 60881,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225506,
+      "local_ms": 87.77159999590367,
+      "returned_bytes_reduction_vs_full_pct": 0.0,
+      "returned_bytes_reduction_vs_targeted_pct": -1026.7999259670553
+    },
+    {
+      "case": "unicode",
+      "condition": "C+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 99.1111999610439,
+      "returned_bytes_reduction_vs_full_pct": 12.24355710320133,
+      "returned_bytes_reduction_vs_targeted_pct": -888.8395335924486
+    },
+    {
+      "case": "unicode",
+      "condition": "C+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 117.00050008948892,
+      "returned_bytes_reduction_vs_full_pct": -0.2545950296479971,
+      "returned_bytes_reduction_vs_targeted_pct": -1029.6687025726449
+    },
+    {
+      "case": "unicode",
+      "condition": "Q+H",
+      "all_valid": true,
+      "returned_utf8_bytes": 13071,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 87.42799994070083,
+      "returned_bytes_reduction_vs_full_pct": 78.53024753207076,
+      "returned_bytes_reduction_vs_targeted_pct": -141.9211549139367
+    },
+    {
+      "case": "unicode",
+      "condition": "Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 105.42560007888824,
+      "returned_bytes_reduction_vs_full_pct": 90.77380463527209,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "unicode",
+      "condition": "Q+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 13226,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 128.71970003470778,
+      "returned_bytes_reduction_vs_full_pct": 78.27565250242276,
+      "returned_bytes_reduction_vs_targeted_pct": -144.7899315195262
+    },
+    {
+      "case": "unicode",
+      "condition": "H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 53427,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 56.54530005995184,
+      "returned_bytes_reduction_vs_full_pct": 12.24355710320133,
+      "returned_bytes_reduction_vs_targeted_pct": -888.8395335924486
+    },
+    {
+      "case": "unicode",
+      "condition": "H+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 61036,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 77.34109996818006,
+      "returned_bytes_reduction_vs_full_pct": -0.2545950296479971,
+      "returned_bytes_reduction_vs_targeted_pct": -1029.6687025726449
+    },
+    {
+      "case": "unicode",
+      "condition": "R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 95.50129994750023,
+      "returned_bytes_reduction_vs_full_pct": 11.988962073553322,
+      "returned_bytes_reduction_vs_targeted_pct": -891.7083101980381
+    },
+    {
+      "case": "unicode",
+      "condition": "S+C+Q",
+      "all_valid": true,
+      "returned_utf8_bytes": 13558,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 81500,
+      "local_ms": 145.3662000130862,
+      "returned_bytes_reduction_vs_full_pct": 77.73032637440252,
+      "returned_bytes_reduction_vs_targeted_pct": -150.93466592633723
+    },
+    {
+      "case": "unicode",
+      "condition": "S+H+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 53914,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 108.9395999442786,
+      "returned_bytes_reduction_vs_full_pct": 11.443635945533092,
+      "returned_bytes_reduction_vs_targeted_pct": -897.8530446048492
+    },
+    {
+      "case": "unicode",
+      "condition": "C+Q+R",
+      "all_valid": true,
+      "returned_utf8_bytes": 5617,
+      "evidence_hash_calls": 24,
+      "evidence_bytes_hashed": 1155312,
+      "artifact_disk_bytes_including_catalog": 225507,
+      "local_ms": 109.88190001808107,
+      "returned_bytes_reduction_vs_full_pct": 90.77380463527209,
+      "returned_bytes_reduction_vs_targeted_pct": -3.9607625393299983
+    },
+    {
+      "case": "unicode",
+      "condition": "H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 53582,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 177182,
+      "local_ms": 76.64380001369864,
+      "returned_bytes_reduction_vs_full_pct": 11.988962073553322,
+      "returned_bytes_reduction_vs_targeted_pct": -891.7083101980381
+    },
+    {
+      "case": "unicode",
+      "condition": "S+C+Q+H+R+U",
+      "all_valid": true,
+      "returned_utf8_bytes": 6259,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 81499,
+      "local_ms": 143.54840002488345,
+      "returned_bytes_reduction_vs_full_pct": 89.71928844795585,
+      "returned_bytes_reduction_vs_targeted_pct": -15.843050157320015
+    },
+    {
+      "case": "unicode",
+      "condition": "adaptive-native",
+      "all_valid": true,
+      "returned_utf8_bytes": 5403,
+      "evidence_hash_calls": 1,
+      "evidence_bytes_hashed": 48138,
+      "artifact_disk_bytes_including_catalog": 144414,
+      "local_ms": 47.29720007162541,
+      "returned_bytes_reduction_vs_full_pct": 91.12531003104417,
+      "returned_bytes_reduction_vs_targeted_pct": 0.0
+    }
+  ]
+}
