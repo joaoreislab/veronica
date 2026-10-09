@@ -146,8 +146,10 @@ The title remains a question: we have not demonstrated a performance or token-co
 
 ## 📄 License, terms and privacy
 
-**Veronica's code and documentation are MIT-licensed:** free to use, modify and redistribute, including commercially, while preserving the license notice. The poster and visual assets are excluded from that grant; see their separate notices.
+**Veronica is source-available for noncommercial use under PolyForm Noncommercial 1.0.0.** Personal study, hobby projects and other permitted purposes can use, modify and share it subject to the license. Commercial use is not granted by the current license, including paid services and business automation outside its permitted purposes. The license expressly permits certain educational, charitable and public institutions. The poster and visual assets remain separately addressed.
 
-[MIT License](LICENSE) · [Terms of Use](TERMS_OF_USE.md) · [Privacy Notice](PRIVACY.md) · [Third-Party and Asset Notices](THIRD_PARTY_NOTICES.md)
+**Historical exception:** material already offered under MIT remains available under those earlier permissions. Changing today's license cannot remove that grant; see [license history](LICENSE_HISTORY.md). This project does not claim that earlier MIT-covered code has become commercially unusable.
 
-The current helpers keep project records locally and have no built-in adoption telemetry. Your AI host and connected services have their own data handling. The terms supplement the MIT license without reducing its permissions, and preserve mandatory legal rights. Licensing review scope and limitations are recorded in [the review note](docs/LEGAL_REVIEW.md).
+[Noncommercial License](LICENSE) · [Terms of Use](TERMS_OF_USE.md) · [Privacy Notice](PRIVACY.md) · [Third-Party and Asset Notices](THIRD_PARTY_NOTICES.md)
+
+The current helpers keep project records locally and have no built-in adoption telemetry. Your AI host and connected services have their own data handling. The terms supplement the current license without changing its permitted purposes, and preserve mandatory legal rights. A restriction on commercial use means this is not an OSI open-source license. Licensing review scope and limitations are recorded in [the review note](docs/LEGAL_REVIEW.md).

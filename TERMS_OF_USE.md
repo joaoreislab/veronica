@@ -4,9 +4,13 @@ Effective date: October 9, 2026. Maintained by the GitHub account [joaoreislab](
 
 ## 1. Software license comes first
 
-Veronica's code and associated documentation are available under the [MIT License](LICENSE). It permits personal and commercial use, modification, redistribution, sublicensing and sale, subject to preservation of its copyright and permission notice.
+The current distribution of Veronica's code and associated documentation is offered under [PolyForm Noncommercial 1.0.0](LICENSE). Use, modification and redistribution are limited to its permitted purposes and conditions. Commercial use is not granted by this license. Its express permissions include personal research and hobby activities without anticipated commercial application, and use by the noncommercial organizations described in the license.
 
-This document explains the project's operation and legal boundaries. It does not add conditions to, override, or withdraw the MIT permissions. Viewing this repository is not presented as acceptance of a separate paid-service agreement. Any binding additional service terms require a separate agreement where applicable.
+Paid client work, commercial hosting, resale and ordinary for-profit business operations are not authorized merely because no separate fee is charged for Veronica. These examples describe the project's policy; the standard license text controls its scope and exceptions. No separate commercial permission is offered by these notices.
+
+**Earlier MIT grants remain:** code and documentation offered under MIT at commit `a1508a4bf426868034ef684799361780bff1dcc1` can continue to be used under that license, including commercially. The new license does not erase that grant or prevent redistribution of those earlier materials. See [license history](LICENSE_HISTORY.md).
+
+This document explains the project's operation and legal boundaries. It does not modify the standard PolyForm terms or withdraw permissions already granted under an earlier license. Viewing this repository is not presented as acceptance of a separate paid-service agreement. Any binding additional service terms require a separate agreement where applicable.
 
 The poster and other separately identified materials are addressed in [Third-Party and Asset Notices](THIRD_PARTY_NOTICES.md). The software license is not a grant of trademark rights or permission to imply official endorsement. Accurate identification of the project is not prohibited. No trademark registration is asserted here.
 
@@ -20,7 +24,7 @@ The project does not promise uninterrupted autonomous execution, preservation of
 
 Users and operators should provide appropriate authorization for access to files, accounts and external systems; review important results and actions; and keep backups appropriate to the task. A hash verifies file identity, not factual accuracy or fitness for a purpose. Recovery bundles cover explicitly included material, not complete machines, account access or all applications.
 
-Users remain responsible for complying with applicable law and third-party rights in their own activities. This reminder does not limit the uses permitted by MIT or transfer responsibilities that the law assigns to another party.
+Users remain responsible for complying with applicable law and third-party rights in their own activities. This reminder does not change the uses permitted by the applicable license or transfer responsibilities that the law assigns to another party.
 
 ## 4. Data and generated work
 
@@ -32,14 +36,14 @@ Public issues, pull requests and comments are public GitHub content. Do not incl
 
 ## 5. Price, support and future services
 
-The project currently distributes Veronica without a license fee. Optional donations, support, training, customization or hosted services, if offered, do not become prerequisites for exercising MIT permissions. Paid services require their own description, prices, support commitments, applicable privacy information and agreement. No paid service or service-level commitment is created by this document.
+The current noncommercial distribution has no license fee. Optional donations do not buy commercial permission. No commercial hosting, paid support operation or other commercial use is licensed by this document. Any future service or commercial permission would require a separate, explicit decision by the relevant rights holders and appropriate service terms; none is being offered here. Historical MIT permissions are unaffected. No paid service or service-level commitment is created by this document.
 
 ## 6. Warranties and mandatory rights
 
-The MIT warranty disclaimer and limitation of liability apply only to the extent permitted by applicable law. Nothing in these notices excludes mandatory consumer protections, data-protection rights, access to courts or other non-waivable rights. No compulsory arbitration, blanket indemnity or exclusive foreign forum is imposed here.
+The applicable license's warranty disclaimer and limitation of liability apply only to the extent permitted by applicable law. Nothing in these notices excludes mandatory consumer protections, data-protection rights, access to courts or other non-waivable rights. No compulsory arbitration, blanket indemnity or exclusive foreign forum is imposed here.
 
 ## 7. Changes and contact
 
-Updates to these notices will be dated and recorded in repository history. They do not retroactively remove MIT permissions already granted for distributed code and documentation. Forks and third-party services should identify their own operators and policies.
+Updates to these notices will be dated and recorded in repository history. They do not retroactively remove permissions already granted for distributed code and documentation, including the earlier MIT grant. Forks and third-party services should identify their own operators and policies.
 
 For project or licensing questions, open a non-sensitive [GitHub issue](https://github.com/joaoreislab/veronica/issues). These notices do not certify universal legal compliance or replace review of a specific commercial operation by a qualified professional.

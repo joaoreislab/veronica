@@ -1,3 +1,28 @@
+# Current licensing review — October 9, 2026
+
+The maintainer clarified that commercial use should not be permitted. The current distribution now uses the unmodified canonical PolyForm Noncommercial 1.0.0 text, accompanied by NOTICE. The same license and notice are included in the installable skill folder. Terms, README, contribution guidance and asset notices have been aligned with this policy.
+
+## Important historical limitation
+
+The MIT grant already published at commit `a1508a4bf426868034ef684799361780bff1dcc1` is not revoked. The already published implementation remains available under those earlier permissions, including commercial use. New protectable material can be offered under the new terms; existing material does not lose its MIT rights. See [license history](../LICENSE_HISTORY.md).
+
+## Current source and classification
+
+- [Canonical PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)
+- [Official source text](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/PolyForm-Noncommercial-1.0.0.md)
+- [License-text reuse permission](https://github.com/polyformproject/polyform-licenses/blob/1.0.0/README.md)
+- [OSI definition](https://opensource.org/osd): restrictions on commercial fields of use mean this license is source-available rather than open source.
+
+PolyForm's institutional permissions remain intact; no custom clause narrows or rewrites the standard license. The notices describe commercial restrictions only for material and uses subject to this grant, not for surviving MIT grants. No future commercial license is being offered. All mandatory-rights and artwork-clearance limitations below continue to apply.
+
+This is a documentation-only change. The runtime, installed skill, existing tags and release assets are unchanged. No legal certification is made.
+
+---
+
+# Historical review — superseded current-license decision
+
+The following records the initial MIT publication and its review. References below to MIT describe that historical decision, not the current license policy. Its grants remain legally significant as explained above.
+
 # Licensing and notices review — October 9, 2026
 
 ## Decision and scope

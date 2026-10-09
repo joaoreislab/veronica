@@ -1,6 +1,8 @@
 # Distribution notices
 
-Veronica's code and associated documentation are licensed under the accompanying [MIT License](LICENSE). Preserve that notice when redistributing copies or substantial portions.
+The current distribution of Veronica's code and associated documentation is offered under the accompanying [PolyForm Noncommercial 1.0.0 license](LICENSE). Preserve its terms and the accompanying [required notice](NOTICE) when redistributing. Commercial use is not granted by this license; its permitted purposes and institutional exceptions are defined in the text.
+
+Earlier code and documentation were offered under MIT. Those earlier grants, including commercial permissions, survive this change. See [license history](https://github.com/joaoreislab/veronica/blob/main/LICENSE_HISTORY.md). This change cannot prohibit commercial use of material already available under MIT.
 
 Project notices are available in the repository:
 
@@ -8,4 +10,4 @@ Project notices are available in the repository:
 - [Privacy Notice](https://github.com/joaoreislab/veronica/blob/main/PRIVACY.md)
 - [Third-Party and Asset Notices](https://github.com/joaoreislab/veronica/blob/main/THIRD_PARTY_NOTICES.md)
 
-These notices do not restrict or override the MIT permissions. The current helpers have no built-in adoption telemetry. Hosts and connected services have their own terms and data handling. Separately identified artwork is not covered by the software license.
+These notices do not modify the standard license or withdraw earlier permissions. The current helpers have no built-in adoption telemetry. Hosts and connected services have their own terms and data handling. Separately identified artwork is not covered by the software license.

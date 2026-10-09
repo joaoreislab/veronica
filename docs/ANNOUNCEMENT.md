@@ -39,3 +39,7 @@ These measurements do **not** establish billed token or dollar savings. Original
 **Versioning note:** the feature package was initially published as 1.1.2. The new 1.2.0 release corrects its SemVer classification because it includes compatible new capabilities; the old tag is preserved.
 
 🚀 [Explore Veronica and get started](../README.md) · 🌱 [Share a use case or issue](https://github.com/joaoreislab/veronica/issues)
+
+## License policy update — October 9, 2026
+
+Veronica's current distribution is source-available under [PolyForm Noncommercial 1.0.0](../LICENSE), for the permitted purposes defined in that license. Commercial use is not granted by it. Earlier material published under MIT retains its original permissions, including commercial use; this change cannot revoke them. See [license history](../LICENSE_HISTORY.md) and [terms](../TERMS_OF_USE.md). The runtime remains version 1.2.0.

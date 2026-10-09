@@ -10,7 +10,7 @@ A proposal should explain the problem, resulting behavior, verification, and lim
 
 ## Licensing contributions
 
-Submit only material you are authorized to contribute. Unless explicitly disclosed and agreed otherwise, contributions intended for inclusion in the project's MIT-covered code or documentation are offered under the same MIT license. Copyright ownership is not transferred by this notice; no separate contributor license agreement is currently required.
+Submit only material you are authorized to contribute. Unless explicitly disclosed and agreed otherwise, new contributions intended for inclusion in the project's code or documentation are offered under PolyForm Noncommercial 1.0.0. Earlier contributions retain their previously granted permissions; this change does not revoke them. Copyright ownership is not transferred by this notice; no separate contributor license agreement is currently required.
 
 Disclose copied or adapted third-party material, its source and license before inclusion, and preserve required notices. Do not assume a public repository permits copying. Artwork and other separately licensed material require an explicit rights review; see [Third-Party and Asset Notices](THIRD_PARTY_NOTICES.md).
 
