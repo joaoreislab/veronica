@@ -1,0 +1,70 @@
+name: Publish Veronica 1.2.0
+
+# Publication is confined to this requested release and the reviewed commit.
+# Ordinary source/documentation pushes do not trigger this workflow.
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-1.2.0.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-veronica-1.2.0
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'joaoreislab/veronica'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: a9148b81d83322e88f3c3abdc596d8ed37aed2b6
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Verify the retained runtime
+        run: python -m unittest discover -s veronica/scripts -p "test_*.py" -v
+      - name: Verify files and prepare the release
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          import zipfile
+
+          commit = 'a9148b81d83322e88f3c3abdc596d8ed37aed2b6'
+          manifest = json.loads(Path('package-manifest.json').read_text(encoding='utf-8'))
+          assert manifest['version'] == '1.2.0'
+          files = manifest['skill_sha256']
+          assert len(files) == 16
+          with zipfile.ZipFile('veronica-1.2.0.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
+              for relative, expected in sorted(files.items()):
+                  path = Path('veronica') / relative
+                  content = path.read_bytes()
+                  assert hashlib.sha256(content).hexdigest() == expected, relative
+                  archive.writestr('veronica/' + relative, content)
+          body = Path('docs/ANNOUNCEMENT.md').read_text(encoding='utf-8')
+          body = body.replace('(../assets/veronica-poster.jpg)', f'(https://raw.githubusercontent.com/joaoreislab/veronica/{commit}/assets/veronica-poster.jpg)')
+          body = body.replace('(VALIDATION-1.2.0.md)', f'(https://github.com/joaoreislab/veronica/blob/{commit}/docs/VALIDATION-1.2.0.md)')
+          body = body.replace('(../README.md)', '(https://github.com/joaoreislab/veronica#readme)')
+          Path('release-body.md').write_text(body, encoding='utf-8')
+          PY
+      - name: Publish the requested release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.2.0 --repo joaoreislab/veronica >/dev/null 2>&1; then
+            echo "Release already exists; leaving it unchanged."
+            exit 0
+          fi
+          gh release create v1.2.0 veronica-1.2.0.zip \
+            --repo joaoreislab/veronica \
+            --target a9148b81d83322e88f3c3abdc596d8ed37aed2b6 \
+            --title 'Veronica 1.2.0 🌸 Long projects, clearer handoffs' \
+            --notes-file release-body.md \
+            --latest
