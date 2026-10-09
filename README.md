@@ -142,4 +142,12 @@ A project's private state lives under `work/veronica/`, outside this distributio
 
 Veronica is an independent implementation. Its research included [Ruflo](https://github.com/ruvnet/ruflo), [Superpowers](https://github.com/obra/superpowers), GSD and other projects; see the [design references](veronica/references/origens.md).
 
-The title remains a question: we have not demonstrated a performance or token-consumption comparison against Ruflo. Share a concrete use case, reproducible issue or measured improvement through the repository's [issues](https://github.com/joaoreislab/veronica/issues). See [CONTRIBUTING.md](CONTRIBUTING.md). A distribution license has not been selected; public availability alone does not grant an open-source license.
+The title remains a question: we have not demonstrated a performance or token-consumption comparison against Ruflo. Share a concrete use case, reproducible issue or measured improvement through the repository's [issues](https://github.com/joaoreislab/veronica/issues). See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 📄 License, terms and privacy
+
+**Veronica's code and documentation are MIT-licensed:** free to use, modify and redistribute, including commercially, while preserving the license notice. The poster and visual assets are excluded from that grant; see their separate notices.
+
+[MIT License](LICENSE) · [Terms of Use](TERMS_OF_USE.md) · [Privacy Notice](PRIVACY.md) · [Third-Party and Asset Notices](THIRD_PARTY_NOTICES.md)
+
+The current helpers keep project records locally and have no built-in adoption telemetry. Your AI host and connected services have their own data handling. The terms supplement the MIT license without reducing its permissions, and preserve mandatory legal rights. Licensing review scope and limitations are recorded in [the review note](docs/LEGAL_REVIEW.md).
