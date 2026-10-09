@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Veronica 1.1.2: cooperative local work ledger. Standard library only.
+"""Veronica 1.2.0: cooperative local work ledger. Standard library only.
 No commands, network calls, agents, or external effects are executed here.
 """
 import argparse
@@ -18,7 +18,7 @@ import sys
 import time
 import uuid
 
-VERSION = "1.1.2"
+VERSION = "1.2.0"
 KINDS = {"file", "runtime", "source", "human"}
 ID_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._-]{0,63}$")
 

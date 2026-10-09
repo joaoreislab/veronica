@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.2.0",
   "python": "3.12.14",
   "platform": "Windows",
   "tests_passed": 59,
@@ -31,7 +31,12 @@
     "scripts/test_preservation.py": "d09b2402fec41e8d63677bd2768967eebe325ac4727ef104394903a3769c68b7",
     "scripts/test_robustness.py": "8293aa7dcc013eebe91d853c18a8c48968a3164ec69dfd398c620248c9589cb0",
     "scripts/test_veronica.py": "58f6b102764f451e39cf24bfe46799adb58b641ac69928f6c78bae9dd489c202",
-    "scripts/veronica.py": "81876b58e85e9382892a5576035c6b52989d6cf034a61386624aba61f9427bc7",
-    "SKILL.md": "44af29c9607946e133964dbe68fa3a486639813ca472c39e0d46e3ddf183fd93"
-  }
+    "scripts/veronica.py": "e8f86206d8fa81684155a4a3784ec06a228e553e611a242bb2b4b016804a7a82",
+    "SKILL.md": "ce75ad41041e9183f16a4ac1eb52c4fb5dfd124d306f425f3a5dde44261f0a39"
+  },
+  "retained_runtime_from": "1.1.2",
+  "historical_validation_version": "1.1.2",
+  "versioning_policy": "docs/VERSIONING.md",
+  "regression_log": "docs/benchmarks/tests-1.2.0.log",
+  "current_regression_tests_passed": 59
 }

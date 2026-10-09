@@ -1,57 +1,115 @@
+![Veronica: burgundy circles and a flower on a dark background](assets/veronica-poster.jpg)
+
 # Veronica, an optimized Ruflo?
 
-**An agent skill for long-running AI projects, with persistent state, resumable work and verifiable completion.**
+**🌸 Give a long AI project a clear path forward, a place to save its progress, and a way to check the result.**
 
-**Version 1.1.2** strengthens recovery and concurrency while keeping the skill entrypoint smaller. Python 3.10+ and the standard library are sufficient for its runtime. No resident service, model router or mandatory agent swarm is required.
+Ever returned to an AI project and spent the first hour explaining it all over again? Veronica helps your assistant keep the goal, detailed requirements, decisions, unfinished work and next steps in your workspace, ready for the next session.
 
-When work spans several sessions, Veronica keeps the goal, dependencies, decisions, next steps and evidence in the workspace. The assistant performs the work with the host's tools; the local helpers preserve and validate the process records.
+**Veronica 1.2.0** is a reusable skill with lightweight local tools. Your assistant does the thinking and uses the tools available in its environment; Veronica gives that work continuity and structure.
 
-## Capabilities
+[🚀 Get started](#-get-started) · [🌸 What's new](#-whats-new-in-120) · [📊 Measured results](#-what-we-actually-measured) · [📣 Announcement](docs/ANNOUNCEMENT.md)
 
-| Capability | What it provides |
+## 🧭 Built for work that takes more than one sitting
+
+Research a difficult topic. Build an app. Prepare a report with dozens of sources. Improve a project over several rounds of feedback.
+
+Veronica helps turn that large objective into useful tasks, tracks which tasks depend on others, and records discoveries as the work evolves. It saves a handoff with what has been done, what remains uncertain and what to do next. When you return, the assistant can check the actual files and continue from that record.
+
+Detailed inputs and original files remain available alongside shorter views. A handoff is a route back to the work, not a replacement for its full history. The model still has a finite context window, so continuity depends on preserving and consulting those records.
+
+## 🤝 A team when the project benefits from one
+
+When your environment supports agents and their use is authorized, Veronica guides the assistant in dividing independent work: one agent researches, another implements, another reviews.
+
+Each assignment gets an expected deliverable, completion criteria and a declared area for writing. Cooperative reservations help avoid overlapping edits; dependencies keep unfinished work from being treated as ready. Handoffs carry relevant instructions and inputs, and the lead assistant checks the combined result.
+
+Extra agents bring context and coordination costs. The workflow considers those costs before delegating. Its helpers track assignments and reservations; the host provides and launches the agents.
+
+## 🧰 Choose useful tools for the actual job
+
+Agents, other skills, MCP servers, connectors, plugins, command-line tools, libraries and direct execution can all be considered when available and authorized.
+
+The assistant looks for a concrete advantage: faster access to a source, a reliable conversion, a reusable operation, or a better verification. It considers setup, extra calls, context, local resources and the quality of the outcome.
+
+That can support research, coding, document production and other workflows through your environment's capabilities. Veronica provides the work ledger, artifact storage, checks and recovery; it does not install integrations or supply every tool itself.
+
+## 💡 Efficiency that keeps room to think
+
+The goal is to remove repeated work and unnecessary context while preserving detailed requirements and the freedom to investigate.
+
+- 🔎 **Read what is relevant now.** Focused task views, explicit index pages and literal searches help locate material. Full originals remain accessible.
+- 📚 **Load instructions when needed.** The entrypoint stays compact; deeper operation, coordination and recovery guides are consulted for their specific jobs.
+- ♻️ **Reuse verified work.** Exact duplicates can share storage while keeping their separate origins. Artifact compaction is optional, reversible and checked for byte equality.
+- 🧾 **Keep usage honest.** Observed token records and estimates are separate. Unknown values remain unknown; duplicate events are handled without counting them twice.
+
+There is no imposed token quota, forced model downgrade or instruction to reduce reasoning. The workflow does not change your host's limits or subscription.
+
+### 🎛️ How the approach adapts
+
+| The work in front of you | A useful approach |
 | --- | --- |
-| Persistent work ledger | Goals, tasks, dependencies, attempts, decisions and events in SQLite. |
-| Resumption | `RETOMAR.md`, complete structured context and next actions. |
-| Current completion evidence | Per-criterion evidence with attachment hashes, expiry and dependency acceptance. Semantic judgment stays with the executor. |
-| Cooperative coordination | Executor leases and declared write areas; available agents are used when authorized and useful. |
-| Exact artifacts | SHA256 snapshots, separate provenance, byte-exact recovery and literal search. |
-| Optional context views | Complete originals remain available. Task views and explicit index pages help navigate larger projects. |
-| Observed usage accounting | Idempotent event records, explicit unknown values and separate estimates. No forced model downgrade or budget cap. |
-| Recovery bundles | Ledger, artifact catalog, blobs, receipts and explicitly selected product files, verified before restoration into a new workspace. |
-| Deep diagnostics | Logical state, dependency cycles, artifact consistency and projection generation checks, on demand. |
-| Uncertain external effects | Preserve uncertainty and require destination reconciliation before retrying an action. |
+| A quick, self-contained request | Execute directly with minimal process. |
+| A large project with lots of material | Consult relevant tasks and sources, then expand as needed. |
+| Independent research or implementation | Consider parallel agents if the benefit justifies the overhead. |
+| An interruption or inconsistent state | Diagnose, reconcile records and use verified recovery when needed. |
 
-## What changed in 1.1.2
+These are workflow choices made by the assistant, not fixed performance presets or an automatic model router. The approach can change as the project changes.
 
-- Reject malformed task/evidence fields before committing unusable state.
-- Validate usage identities and handle invalid legacy records without silently counting them as complete.
-- Serialize duplicate usage writes, including concurrent callers.
-- Stage and verify restored files before atomic promotion without overwriting an existing destination.
-- Serialize dashboard generation with ledger writers and mark each generation with revision and hashes.
-- Traverse long dependency chains iteratively.
-- Preserve capture receipts so an interrupted catalog commit can be reconciled explicitly.
-- Add `doctor --deep`, artifact reconciliation and recovery bundles without making them a startup ritual.
-- Shorten the skill entrypoint and keep detailed procedures in references loaded when needed.
+## 🛡️ Progress you can inspect, and recovery you can check
 
-See [release notes](docs/releases/1.1.2.md) and the [validation report](docs/VALIDATION-1.1.2.md).
+“Done” needs evidence tied to the task's criteria. The helpers can check whether attached files changed, whether evidence expired and whether dependencies still have current acceptance. The assistant or reviewer evaluates whether the result is actually good.
 
-## Get started
+Original artifacts can be retrieved byte for byte. Recovery bundles collect the work ledger, artifact catalog and explicitly selected project files, with hashes checked before restoration into a new workspace.
 
-Install the [`veronica/`](veronica/SKILL.md) folder into your environment's personal skills directory. Keep its name and internal structure. In a conversation that loads the skill, ask:
+If an external action has an uncertain result, the workflow records that uncertainty and calls for checking the destination before retrying. This matters for actions such as publication, where repeating an unconfirmed operation can cause confusion.
 
-> Use $veronica to manage this project, preserve the detailed requirements, record verification and keep the next step.
+## 🌸 What's new in 1.2.0?
 
-To continue:
+- 🧳 **Recovery bundles:** carry saved process state and selected deliverables into a new workspace, with verification.
+- 🩺 **Deeper checks on demand:** inspect dependencies, artifacts and generated status files when troubleshooting.
+- 🧩 **Reconcile interrupted captures:** saved receipts help reconnect intact artifacts with their catalog.
+- 📄 **Focused navigation:** paginate the unrelated task index while retaining selected task/dependency details and global notes.
+- 🔒 **Stronger concurrent work:** safer usage recording and status generation; staged file restoration avoids overwriting existing destinations.
+- 🪜 **Long dependency chains:** iterative traversal avoids recursive call-stack limits.
+- 🪶 **A smaller entrypoint:** detailed procedures stay in references loaded when needed.
+
+The feature package was first published as 1.1.2. **1.2.0 corrects its semantic version:** compatible new capabilities warrant a minor release. The old tag remains in the history. See [release notes](docs/releases/1.2.0.md) and [versioning policy](docs/VERSIONING.md).
+
+## 📊 What we actually measured
+
+The previous runtime passed **59 regression tests** and **261 controlled local workflow executions**, checking individual modules, varied combinations and the full group. Its CI passed on Windows and Ubuntu with Python 3.10 and 3.12. The runtime implementation is retained in 1.2.0; version labels and public presentation are updated.
+
+In the measured targeted-context comparison, shared evidence hashing went from **24 calls to 1: 95.83% fewer evidence-hash calls**, with the same **5,403 returned UTF-8 bytes**. The earlier entrypoint reduction was **9.94% in UTF-8 bytes**.
+
+We measured the cost of enabling everything too: the full six-module combination returned **15.84% more bytes** than the targeted native approach. That supports choosing tools selectively.
+
+**These are local measurements, not a demonstrated percentage of billed token or dollar savings.** No model/API calls were used in that workflow benchmark. See the [validation report](docs/VALIDATION-1.2.0.md) for scope and evidence.
+
+## 🏗️ How it is built
+
+**Instructions guide judgment. Python handles repeatable operations. SQLite keeps the process state.**
+
+The runtime uses Python 3.10+ and its standard library, with no additional runtime dependency or resident service. Routine operations can call the helpers without loading their whole source into the model's context.
+
+Your host controls the model, tool access and execution. Veronica does not keep a chat running after its host stops; recovery bundles do not restore apps or logins.
+
+## 🚀 Get started
+
+Install the [`veronica/`](veronica/SKILL.md) folder in your environment's personal skills directory, preserving its structure. Then ask:
+
+> Use $veronica to manage this project. Preserve the detailed requirements, organize the work, record verification and keep the next step ready for our next session.
+
+To resume:
 
 > Use $veronica to resume this workspace and check what remains.
 
-Small tasks can proceed directly. The assistant needs workspace access and the tools required for the actual objective. See the [operation guide](veronica/references/operacao.md), [recovery guide](veronica/references/recuperacao.md) and [examples](docs/EXEMPLOS.md).
+The assistant needs workspace access and the tools required for your objective. Public introductions are in English; the personal skill and detailed guides are in Portuguese. Browse the [examples](docs/EXEMPLOS.md), [operation guide](veronica/references/operacao.md) and [recovery guide](veronica/references/recuperacao.md).
 
-Public introductions and release notes are in English. The personal skill instructions and reference guides are in Portuguese.
+<details>
+<summary>🔧 Commands, tests and folder structure</summary>
 
-## Example commands
-
-Replace `PROJECT` and the Python executable with your actual paths. On Windows PowerShell, invoke a quoted executable path with `&`.
+Replace `PROJECT` and the Python executable with your actual paths. In Windows PowerShell, use `&` before a quoted executable path.
 
 ```sh
 python veronica/scripts/veronica.py --workspace PROJECT status
@@ -60,42 +118,28 @@ python veronica/scripts/veronica.py --workspace PROJECT doctor --deep
 python veronica/scripts/preserve.py --workspace PROJECT reconcile
 python veronica/scripts/recovery.py bundle --workspace PROJECT --output outputs/recovery-001 --include outputs/deliverable
 python veronica/scripts/recovery.py restore --bundle BUNDLE_PATH --workspace NEW_WORKSPACE
-```
-
-Recovery bundles include product files only when explicitly selected. They do not restore applications, services, credentials or external resources. Stabilize product writers before bundling; SQLite locks coordinate cooperating ledger/catalog writers, not other applications.
-
-## Validation
-
-Run the regression suite from the repository root:
-
-```sh
 python -m unittest discover -s veronica/scripts -p "test_*.py" -v
 ```
 
-The suite covers persistence, reservations, concurrent writes, stale evidence, Unicode/CRLF preservation, injected interruptions, artifact reconciliation, projection consistency, deep dependencies and restoration into a new process. The release report distinguishes these tests from workflow comparisons and model/API measurements.
-
-Local bytes, hashing and timing measurements do not establish billed token savings or general model quality. Synthetic usage records test accounting, not actual provider charges. Checkpoints of the ledger remain available with their original scope; recovery bundles are a separate operation.
-
-## Structure
+Bundle only stable product files. Cooperating SQLite writers are coordinated; other applications' writes require separate coordination.
 
 ```text
-veronica/SKILL.md              concise workflow entrypoint
+veronica/SKILL.md              workflow entrypoint
 veronica/agents/openai.yaml    skill metadata
-veronica/scripts/              standard-library runtime and tests
+veronica/scripts/              standard-library helpers and tests
 veronica/references/           guides consulted when needed
-docs/                         English presentation and release evidence
+docs/                         presentation, versioning and validation
+assets/                       Veronica poster
 scripts/compare_workflows.py   optional development benchmark
 .github/workflows/tests.yml    regression checks
 ```
 
-During use, the project's private state lives under `work/veronica/`. It is excluded from this distribution. Scripts can be executed through their documented interface; their full implementation does not have to be loaded into the model's context for routine use.
+A project's private state lives under `work/veronica/`, outside this distribution.
 
-## Veronica and Ruflo
+</details>
 
-Veronica is an independent implementation. Its design research included [Ruflo](https://github.com/ruvnet/ruflo), [Superpowers](https://github.com/obra/superpowers), GSD and other projects. Attribution and design references are in [origens.md](veronica/references/origens.md).
+## 🌱 Inspiration and participation
 
-The question in the title remains open: no performance, token-consumption or productivity comparison against Ruflo has been demonstrated. Veronica focuses on workflow instructions and a local work ledger; its helpers do not launch agents or MCP servers and do not keep a chat running after its host stops.
+Veronica is an independent implementation. Its research included [Ruflo](https://github.com/ruvnet/ruflo), [Superpowers](https://github.com/obra/superpowers), GSD and other projects; see the [design references](veronica/references/origens.md).
 
-## Contribute and license
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Start with a concrete case, reproducible failure or measured comparison. A distribution license has not been selected; public availability alone does not grant an open-source license.
+The title remains a question: we have not demonstrated a performance or token-consumption comparison against Ruflo. Share a concrete use case, reproducible issue or measured improvement through the repository's [issues](https://github.com/joaoreislab/veronica/issues). See [CONTRIBUTING.md](CONTRIBUTING.md). A distribution license has not been selected; public availability alone does not grant an open-source license.

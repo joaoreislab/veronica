@@ -2,7 +2,7 @@
 name: veronica
 description: Conduzir projetos extensos ou retomar trabalho interrompido com estado local, dependências e evidências de conclusão. Tarefas pontuais seguem diretamente.
 metadata:
-  version: "1.1.2"
+  version: "1.2.0"
 ---
 
 # Veronica
